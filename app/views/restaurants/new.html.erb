@@ -1,0 +1,13 @@
+<%= simple_form_for (@restaurant) do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :address %>
+<%= f.text_field :address %>
+<%= f.label :phone_number %>
+<%= f.text_field :phone_number %>
+<%= f.label :category %>
+<%= f.select :category, ["Chinese", "Italian", "Japanese", "French", "Belgian"] %>
+<%= f.submit %>
+<% end %>
+
+<%= link_to "Take me back!", restaurants_path, class: "btn btn-primary" %>

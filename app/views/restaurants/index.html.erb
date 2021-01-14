@@ -1,0 +1,15 @@
+<h2>Choose a restaurant!</h2>
+
+
+<% @restaurants.each do |r| %>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= r.name %></h5>
+    <p class="card-text"><%= r.address %></p>
+    <a href="<%= restaurant_path(r)%>" class="btn btn-primary">See more</a>
+  </div>
+</div>
+<% end %>
+
+
+<%= link_to "Add a place!", new_restaurant_path(@restaurant), class: "btn btn-primary" %>
